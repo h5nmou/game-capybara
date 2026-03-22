@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>카피바라 '카피'의 위대한 귤 찾기 여행</title>
+  <meta name="description" content="세상에서 가장 느긋한 카피바라 카피와 함께하는 힐링 어드벤처 게임. 전설의 황금 귤 나무를 찾아 여행을 떠나세요!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Gaegu:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="game-container">
+    <!-- Canvas -->
+    <canvas id="game-canvas"></canvas>
+
+    <!-- HUD Overlay -->
+    <div id="hud">
+      <div id="hud-left">
+        <span id="tangerine-icon">🍊</span>
+        <span id="tangerine-count">0</span>
+      </div>
+      <div id="hud-center">
+        <span id="status-message">카피의 여행이 시작됩니다...</span>
+      </div>
+      <div id="hud-right">
+        <button id="btn-sound" title="소리 켜기/끄기">🔊</button>
+        <button id="btn-fullscreen" title="전체 화면">⛶</button>
+      </div>
+    </div>
+
+    <!-- Dialogue Box -->
+    <div id="dialogue-box" class="hidden">
+      <div id="dialogue-speaker"></div>
+      <div id="dialogue-text"></div>
+      <div id="dialogue-hint">클릭하여 계속...</div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div id="quiz-box" class="hidden">
+      <div id="quiz-speaker"></div>
+      <div id="quiz-question"></div>
+      <div id="quiz-answers"></div>
+      <div id="quiz-result"></div>
+    </div>
+
+    <!-- Story Overlay -->
+    <div id="story-overlay">
+      <div id="story-content">
+        <div id="story-text"></div>
+        <button id="story-button" class="hidden">여행을 시작하기</button>
+      </div>
+    </div>
+
+    <!-- Mobile Rotate Prompt -->
+    <div id="rotate-prompt">
+      <div id="rotate-icon">📱↻</div>
+      <div>가로 모드로 전환해 주세요!</div>
+    </div>
+  </div>
+
+  <script src="js/audio.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/entities.js"></script>
+  <script src="js/capybara.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
